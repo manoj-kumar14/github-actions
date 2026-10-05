@@ -1,6 +1,8 @@
 name: Terraform deploy
+
 on:
   workflow_dispatch:
+
 jobs:
   plan:
     name: terraform plan
@@ -26,7 +28,6 @@ jobs:
 
       - name: Terraform Plan
         run: terraform plan -out=tfplan
-      
-       - name: Terraform Apply
+
+      - name: Terraform Apply
         run: terraform apply -auto-approve tfplan
-    
